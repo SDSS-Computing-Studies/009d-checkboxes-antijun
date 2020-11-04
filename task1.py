@@ -17,22 +17,24 @@ Use assignment_test.py to test your functions
 """
 
 
-import tkinter as tk 
-
+import tkinter as tk
+from tkinter import *
 
 
 def binary_to_decimal(binary):
     # binary is a tuple of length 8
     # return value is an integer decimal
 
+    return decimal
+    pass
 
-    return decimal 
 
 def decimal_to_binary(decimal):
     # decimal is an integer value
     # binary is a tuple of length 8 that contains 1's and 0's
 
     return binary
+    pass
 
 
 def get_binary():
@@ -41,6 +43,7 @@ def get_binary():
     # in the 8 checkboxes
 
     binary = binary_to_decimal(decimal)
+    pass
 
 
 def get_decimal():
@@ -49,18 +52,46 @@ def get_decimal():
     # in the entry box
     binary = []
     decimal = binary_to_decimal(binary)
-
+    pass
 
 
 win = tk.Tk()
 
+l1 = Label(win, text="Binary / Decimal Converter!")
 
+cF = Frame()
+c1 = Checkbutton(cF)
+c2 = Checkbutton(cF)
+c3 = Checkbutton(cF)
+c4 = Checkbutton(cF)
+c5 = Checkbutton(cF)
+c6 = Checkbutton(cF)
+c7 = Checkbutton(cF)
+c8 = Checkbutton(cF)
 
-b1 = Button(win, text="Convert to Binary", command=get_binary)
-b2 = Button(win, text="Convert to Decimal", command=get_decimal)
+bF = Frame()
+b1 = Button(bF, text="Convert to Binary", command=get_binary)
+b2 = Button(bF, text="Convert to Decimal", command=get_decimal)
 
+e1 = Entry(win)
 
+l1.pack()
 
+cF.pack()
+c1.pack(side=LEFT)
+c2.pack(side=LEFT)
+c3.pack(side=LEFT)
+c4.pack(side=LEFT)
+c5.pack(side=LEFT)
+c6.pack(side=LEFT)
+c7.pack(side=LEFT)
+c8.pack(side=LEFT)
+
+bF.pack()
+b1.pack(side=LEFT)
+b2.pack(side=LEFT)
+
+e1.pack()
 
 
 win.mainloop()
