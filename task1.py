@@ -24,7 +24,7 @@ from tkinter import *
 def binary_to_decimal(binary):
     # binary is a tuple of length 8
     # return value is an integer decimal
-    print(binary)
+
     bn = binary[0] + binary[1] + binary[2] + binary[3] + \
         binary[4] + binary[5] + binary[6] + binary[7]
     decimal = int(bn, 2)
@@ -35,10 +35,8 @@ def decimal_to_binary(decimal):
     # decimal is an integer value
     # binary is a tuple of length 8 that contains 1's and 0's
 
-    a = bin(decimal).replace("0b", "")
-
+    a = bin(decimal)[2:].zfill(8)
     binary = [a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7]]
-
     return binary
 
 
@@ -130,11 +128,3 @@ b2.pack(side=LEFT)
 e1.pack()
 
 win.mainloop()
-
-
-b = 200
-a = bin(b).replace("0b", "")
-print(a)
-print(a[0])
-print(a[1])
-print(a[2])
